@@ -1,0 +1,14 @@
+.brand h1 {
+  font-size: 4.8em;
+  font-weight: 600;
+}
+
+.brand {
+  margin-top: 15vh;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
