@@ -3,6 +3,10 @@
   font-weight: 600;
 }
 
+.span-big {
+  font-size: 15px;
+}
+
 .brand {
   margin-top: 15vh;
   color: #FFFFFF;
