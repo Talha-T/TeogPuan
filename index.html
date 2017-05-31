@@ -43,6 +43,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Daha Fazla <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Yakında...</a></li>
+							<li><a href="javascript:void(0)"></a></li>
 						</ul>
 					</li>
 				</ul>
@@ -173,7 +174,7 @@
 								<div class="center-block">
 									<div class="form-group label-floating">
 										<label class="control-label">6. Sınıf</label>
-										<input type="number" class="form-control" id="ort-6" min="0" max="100" step="0.00001">
+										<input type="number" class="form-control" id="ort-6" min="0" max="100" step="0.0000000001">
 									</div>
 								</div>
 							</div>
@@ -181,7 +182,7 @@
 								<div class="center-block">
 									<div class="form-group label-floating">
 										<label class="control-label">7. Sınıf</label>
-										<input type="number" class="form-control" id="ort-7" min="0" max="100" step="0.00001">
+										<input type="number" class="form-control" id="ort-7" min="0" max="100" step="0.0000000001">
 									</div>
 								</div>
 							</div>
@@ -189,7 +190,7 @@
 								<div class="center-block">
 									<div class="form-group label-floating">
 										<label class="control-label">8. Sınıf</label>
-										<input type="number" class="form-control" id="ort-8" min="0" max="100" step="0.00001">
+										<input type="number" class="form-control" id="ort-8" min="0" max="100" step="0.0000000001">
 									</div>
 								</div>
 							</div>
@@ -203,7 +204,7 @@
 						<div class="row">
 							<div class="col-md-4 col-md-offset-4 hidden" id="show-col">
 								<h2>Sonucunuz: </h2>
-								<h4 id="result-text"></h4>
+								<h3 id="result-text"></h4>
 							</div>
 						</div>
 
@@ -252,6 +253,25 @@
 <script type="text/javascript">
 $('[data-toggle="tooltip"]').tooltip();
 
+function doldur() {
+	$('#t-1').val(95);
+	$('#m-1').val(95);
+	$('#f-1').val(100);
+	$('#d-1').val(90);
+	$('#i-1').val(95);
+	$('#ing-1').val(100);
+	$('#t-2').val(100);
+	$('#m-2').val(100);
+	$('#f-2').val(100);
+	$('#d-2').val(100);
+	$('#i-2').val(100);
+	$('#ing-2').val(100);
+	$('#ort-6').val(100);
+	$('#ort-7').val(100);
+	$('#ort-8').val(99.8058615385);
+	hesapla();
+}
+
 function hesapla() {
 	$('#show-col').removeClass('hidden');
 	var t1 = $('#t-1').val();
@@ -273,8 +293,7 @@ function hesapla() {
 	var ort7 = (parseFloat($('#ort-7').val())||0);
 	var ort8 = (parseFloat($('#ort-8').val())||0);
 	var total = (av + ort6 + ort7 + ort8) / 2;
-	$('#result-text').html("Ağırlıklandırılmış 1. Sınav Puanı: <span class='label label-primary'>" + av1.toFixed(3) + "</span>" + "<br/> Ağırlıklandırılmış 2. Sınav Puanı: <span class='label label-primary'>" + av2.toFixed(3) + "</span> <br/> Ağırlıklandırılmış Ortak Sınav Puanı: <span class='label label-primary'>" + av.toFixed(3) + "</span> <br/> Yerleştirme Esas Puanı: <span class='label label-primary'>" + total.toFixed(3) + "</span>");
-
+	$('#result-text').html("Ağırlıklandırılmış 1. Sınav Puanı: <span class='label label-primary'>" + av1.toFixed(3) + "</span>" + "<br/> Ağırlıklandırılmış 2. Sınav Puanı: <span class='label label-primary label-big'>" + av2.toFixed(3) + "</span> <br/> Ağırlıklandırılmış Ortak Sınav Puanı: <span class='label label-primary label-big'>" + av.toFixed(3) + "</span> <br/> Yerleştirme Esas Puanı: <span class='label label-primary label-big'>" + total.toFixed(3) + "</span>");
 	$('html, body').animate({
 	                    scrollTop: $("#result-text").offset().top
 	                }, 1000);
