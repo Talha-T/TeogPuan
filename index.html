@@ -293,7 +293,7 @@ function hesapla() {
 	var ort7 = (parseFloat($('#ort-7').val())||0);
 	var ort8 = (parseFloat($('#ort-8').val())||0);
 	var total = (av + ort6 + ort7 + ort8) / 2;
-	$('#result-text').html("Ağırlıklandırılmış 1. Sınav Puanı: <span class='label label-primary'>" + av1.toFixed(3) + "</span>" + "<br/> Ağırlıklandırılmış 2. Sınav Puanı: <span class='label label-primary label-big'>" + av2.toFixed(3) + "</span> <br/> Ağırlıklandırılmış Ortak Sınav Puanı: <span class='label label-primary label-big'>" + av.toFixed(3) + "</span> <br/> Yerleştirme Esas Puanı: <span class='label label-primary label-big'>" + total.toFixed(3) + "</span>");
+	$('#result-text').html("Ağırlıklandırılmış 1. Sınav Puanı: <span class='label label-primary label-big'>" + av1.toFixed(3) + "</span>" + "<br/> Ağırlıklandırılmış 2. Sınav Puanı: <span class='label label-primary label-big'>" + av2.toFixed(3) + "</span> <br/> Ağırlıklandırılmış Ortak Sınav Puanı: <span class='label label-primary label-big'>" + av.toFixed(3) + "</span> <br/> Yerleştirme Esas Puanı: <span class='label label-primary label-big'>" + total.toFixed(3) + "</span>");
 	$('html, body').animate({
 	                    scrollTop: $("#result-text").offset().top
 	                }, 1000);
