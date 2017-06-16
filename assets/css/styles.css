@@ -17,11 +17,11 @@
   visibility: hidden;
 }
 
-.result-div {
+#result-text {
     text-align:center;   
 }
 
-.result-div h3 {
+#result-text h3 {
     margin:auto;
     vertical-align:middle;
 }
