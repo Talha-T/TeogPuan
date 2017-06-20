@@ -1,7 +1,7 @@
 # TeogPuan
 Teog Puanınızı Hesaplayan Gayet Güzel Görünümlü Araç
 
-[Canlı Görün](https://cdn.rawgit.com/Talha-T/TeogPuan/77733ab4/index.html)
+[Canlı Görün](https://rawgit.com/Talha-T/TeogPuan/master/index.html)
 
 ### Fikir
 Sınavdan sonra lazım oldu. Diğer botların görününüşü sevmediğimden kendim bir tane yapmaya karar verdim.
